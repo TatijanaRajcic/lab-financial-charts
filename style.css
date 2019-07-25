@@ -1,5 +1,6 @@
 .header-container{
-  display:flex
+  display:flex;
+  width:100%;
 }
 
 .header-container > div {
@@ -15,4 +16,16 @@
   display:flex;
   align-items: flex-end;
   flex-direction: column
+}
+
+.canvas-container{
+  height:70vh;
+  width:70vw;
+}
+
+.main{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15%;
 }

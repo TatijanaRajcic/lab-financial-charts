@@ -13,36 +13,39 @@
 </head>
 <body>
 
-  <header class="header-container">
-    <div class="filters-container">
-      <h1>Filters</h1>
-      <div id="date-range">
-        <label for="startDate">From:</label>
-        <input type="date" name="startDate" id="start-date" value="">
-  
-        <label for="endDate">To:</label>
-        <input type="date" name="endDate" id="end-date" value="">
+  <div class="main">
+    <header class="header-container">
+      <div class="filters-container">
+        <h1>Filters</h1>
+        <div id="date-range">
+          <label for="startDate">From:</label>
+          <input type="date" name="startDate" id="start-date" value="">
+    
+          <label for="endDate">To:</label>
+          <input type="date" name="endDate" id="end-date" value="">
+        </div>
+        <div id="currency-choice">
+          <label for="currency">Currency</label>
+          <select name="currency" id="currency">
+          </select>
+        </div>
       </div>
-      <div id="currency-choice">
-        <label for="currency">Currency</label>
-        <select name="currency" id="currency">
-          <!-- <option value="EUR">Euro</option> -->
-          <!-- <option value="USD" selected="selected">Dollar</option> -->
-        </select>
+      <div class="values-container">
+        <h1>Values</h1>
+        Max: <span id="max-value"></span>
+        Min: <span id="min-value"></span>
       </div>
-    </div>
-    <div class="values-container">
-      <h1>Values</h1>
-      Max: <span id="max-value"></span>
-      Min: <span id="min-value"></span>
-    </div>
-  </header>
+    </header>
 
-  <div class="canvas-container">
-    <canvas id="myChart"></canvas>
+    <div class="canvas-container">
+      <canvas id="myChart"></canvas>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="currencies.js"></script>
+  <script src="moment.js"></script>
+  <script src="chart.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
