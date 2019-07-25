@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Financial charts</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Axios script -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Chart.js script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+<body>
+
+  <header class="header-container">
+    <div class="filters-container">
+      <h1>Filters</h1>
+      <div id="date-range">
+        <label for="startDate">From:</label>
+        <input type="date" name="startDate" id="start-date" value="">
+  
+        <label for="endDate">To:</label>
+        <input type="date" name="endDate" id="end-date" value="">
+      </div>
+      <div id="currency-choice">
+        <label for="currency">Currency</label>
+        <select name="currency" id="currency">
+          <option value="EUR">Euro</option>
+          <option value="USD">Dollar</option>
+        </select>
+      </div>
+    </div>
+    <div class="values-container">
+      <h1>Values</h1>
+      Max: <span id="max-value"></span>
+      Min: <span id="min-value"></span>
+    </div>
+  </header>
+
+  <canvas id="myChart"></canvas>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
